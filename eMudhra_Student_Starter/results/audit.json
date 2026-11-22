@@ -1,0 +1,100 @@
+{
+  "machine": {
+    "python": "3.14.4",
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD"
+  },
+  "bound_exclusive": 256,
+  "timing": "median of 5 runs, time.perf_counter",
+  "interpretation": "NOT_RECOVERED_IN_SEARCH_SET means only that no scalar in the stated search set matches the public key. It is not evidence that the key was generated securely.",
+  "intermediates": [
+    {
+      "file": "weak_a.pem",
+      "subject": "CN=Lab Weak Intermediate",
+      "issuer": "CN=BITS Crypto Lab Root A",
+      "serial": 101,
+      "curve": "secp384r1",
+      "certificate_sha256": "bc507d4ea95ac5a75ed612e0cddf89dd89f01565c736d1ba9c62562c8b86aba4",
+      "spki_sha256": "fc68c1e28d0b9f35dcc03b5d4f019b9fb4b2f86b9981cd9ff80554da1f14b12c",
+      "valid_public_key": true,
+      "search_set": "1 <= d < 256",
+      "finding": "RECOVERED_IN_SEARCH_SET",
+      "recovered_scalar": 173,
+      "seconds_validation": 5.100038833916187e-06,
+      "seconds_recover_total": 0.010357100050896406,
+      "recomputed_by_scalar_mul": true,
+      "recomputed_by_library": true
+    },
+    {
+      "file": "weak_b.pem",
+      "subject": "CN=Lab Weak Intermediate",
+      "issuer": "CN=BITS Crypto Lab Root B",
+      "serial": 202,
+      "curve": "secp384r1",
+      "certificate_sha256": "622434be66269fd90db95ec7ca26fe122ac96ec9be3d86feedfceb86ae8f0c67",
+      "spki_sha256": "fc68c1e28d0b9f35dcc03b5d4f019b9fb4b2f86b9981cd9ff80554da1f14b12c",
+      "valid_public_key": true,
+      "search_set": "1 <= d < 256",
+      "finding": "RECOVERED_IN_SEARCH_SET",
+      "recovered_scalar": 173,
+      "seconds_validation": 3.1999079510569572e-06,
+      "seconds_recover_total": 0.010585199925117195,
+      "recomputed_by_scalar_mul": true,
+      "recomputed_by_library": true
+    },
+    {
+      "file": "healthy_a.pem",
+      "subject": "CN=Lab Healthy Intermediate A",
+      "issuer": "CN=BITS Crypto Lab Root A",
+      "serial": 103,
+      "curve": "secp384r1",
+      "certificate_sha256": "ed3706b1f87fd9d870c91f752ecfae7ac04ceefc1c658c5453386b001748e3ff",
+      "spki_sha256": "fbda1d690ea6f9422a04da962d4c9f124544d70057ef04e3fdd0357b21f1bf20",
+      "valid_public_key": true,
+      "search_set": "1 <= d < 256",
+      "finding": "NOT_RECOVERED_IN_SEARCH_SET",
+      "recovered_scalar": null,
+      "seconds_validation": 2.800021320581436e-06,
+      "seconds_recover_total": 0.014355399995110929
+    },
+    {
+      "file": "healthy_b.pem",
+      "subject": "CN=Lab Healthy Intermediate B",
+      "issuer": "CN=BITS Crypto Lab Root B",
+      "serial": 204,
+      "curve": "secp384r1",
+      "certificate_sha256": "1d4e83d6263badebd500d1a8116441c9fe5e470f0ad1bd032fb9757dc4ea1bdc",
+      "spki_sha256": "9feaeff36575e08df45b5bea42b3fe4897801e56fb515f867d4dd7f2d3516d76",
+      "valid_public_key": true,
+      "search_set": "1 <= d < 256",
+      "finding": "NOT_RECOVERED_IN_SEARCH_SET",
+      "recovered_scalar": null,
+      "seconds_validation": 3.00002284348011e-06,
+      "seconds_recover_total": 0.014443399966694415
+    }
+  ],
+  "structured": {
+    "file": "structured_public.pem",
+    "candidates_are_2^383+j_for_j_1..8": true,
+    "small_search": {
+      "search_set": "1 <= d < 256",
+      "finding": "NOT_RECOVERED_IN_SEARCH_SET"
+    },
+    "candidate_search": {
+      "search_set": "2^383 + j, 1 <= j <= 8",
+      "finding": "RECOVERED_IN_SEARCH_SET"
+    },
+    "recovered_scalar": 19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153413,
+    "j": 5,
+    "bit_length": 384,
+    "recomputed_by_library": true,
+    "seconds_recover_total": 0.10800000000745058
+  },
+  "shared_keys": [
+    [
+      "weak_a.pem",
+      "weak_b.pem"
+    ]
+  ]
+}

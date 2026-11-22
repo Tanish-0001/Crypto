@@ -1,0 +1,124 @@
+{
+  "inventory": [
+    {
+      "file": "weak_a.pem",
+      "recovered_scalar": 173,
+      "public_key_match": true,
+      "finding": "RECOVERED_IN_SEARCH_SET",
+      "seconds": 0.011127399979159236,
+      "certificate_sha256": "bc507d4ea95ac5a75ed612e0cddf89dd89f01565c736d1ba9c62562c8b86aba4",
+      "spki_sha256": "fc68c1e28d0b9f35dcc03b5d4f019b9fb4b2f86b9981cd9ff80554da1f14b12c"
+    },
+    {
+      "file": "weak_b.pem",
+      "recovered_scalar": 173,
+      "public_key_match": true,
+      "finding": "RECOVERED_IN_SEARCH_SET",
+      "seconds": 0.010841700015589595,
+      "certificate_sha256": "622434be66269fd90db95ec7ca26fe122ac96ec9be3d86feedfceb86ae8f0c67",
+      "spki_sha256": "fc68c1e28d0b9f35dcc03b5d4f019b9fb4b2f86b9981cd9ff80554da1f14b12c"
+    },
+    {
+      "file": "healthy_a.pem",
+      "recovered_scalar": null,
+      "public_key_match": null,
+      "finding": "NOT_RECOVERED_IN_SEARCH_SET",
+      "seconds": 0.015352000016719103,
+      "certificate_sha256": "ed3706b1f87fd9d870c91f752ecfae7ac04ceefc1c658c5453386b001748e3ff",
+      "spki_sha256": "fbda1d690ea6f9422a04da962d4c9f124544d70057ef04e3fdd0357b21f1bf20"
+    },
+    {
+      "file": "healthy_b.pem",
+      "recovered_scalar": null,
+      "public_key_match": null,
+      "finding": "NOT_RECOVERED_IN_SEARCH_SET",
+      "seconds": 0.015383500023745,
+      "certificate_sha256": "1d4e83d6263badebd500d1a8116441c9fe5e470f0ad1bd032fb9757dc4ea1bdc",
+      "spki_sha256": "9feaeff36575e08df45b5bea42b3fe4897801e56fb515f867d4dd7f2d3516d76"
+    }
+  ],
+  "signature": {
+    "library_verified": true,
+    "student_verified": true,
+    "tampered_message_accepted": false
+  },
+  "policy_matrix": {
+    "forged_via_a": {
+      "baseline": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "revoke_a_only": {
+        "accepted": false,
+        "reason": "intermediate: serial 101 revoked by its issuer"
+      },
+      "block_weak_spki": {
+        "accepted": false,
+        "reason": "intermediate: public key (SPKI) is blocked"
+      },
+      "remove_root_a": {
+        "accepted": false,
+        "reason": "root: certificate fingerprint is not a trust anchor"
+      }
+    },
+    "forged_via_b": {
+      "baseline": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "revoke_a_only": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "block_weak_spki": {
+        "accepted": false,
+        "reason": "intermediate: public key (SPKI) is blocked"
+      },
+      "remove_root_a": {
+        "accepted": true,
+        "reason": "accepted"
+      }
+    },
+    "healthy_via_a": {
+      "baseline": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "revoke_a_only": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "block_weak_spki": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "remove_root_a": {
+        "accepted": false,
+        "reason": "root: certificate fingerprint is not a trust anchor"
+      }
+    },
+    "healthy_via_b": {
+      "baseline": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "revoke_a_only": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "block_weak_spki": {
+        "accepted": true,
+        "reason": "accepted"
+      },
+      "remove_root_a": {
+        "accepted": true,
+        "reason": "accepted"
+      }
+    }
+  },
+  "structured_scalar": 19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153413,
+  "ceremony": {
+    "mismatched": false,
+    "consistent": true
+  }
+}

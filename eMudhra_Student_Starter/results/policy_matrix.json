@@ -1,0 +1,74 @@
+{
+  "forged_via_a": {
+    "baseline": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "revoke_a_only": {
+      "accepted": false,
+      "reason": "intermediate: serial 101 revoked by its issuer"
+    },
+    "block_weak_spki": {
+      "accepted": false,
+      "reason": "intermediate: public key (SPKI) is blocked"
+    },
+    "remove_root_a": {
+      "accepted": false,
+      "reason": "root: certificate fingerprint is not a trust anchor"
+    }
+  },
+  "forged_via_b": {
+    "baseline": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "revoke_a_only": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "block_weak_spki": {
+      "accepted": false,
+      "reason": "intermediate: public key (SPKI) is blocked"
+    },
+    "remove_root_a": {
+      "accepted": true,
+      "reason": "accepted"
+    }
+  },
+  "healthy_via_a": {
+    "baseline": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "revoke_a_only": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "block_weak_spki": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "remove_root_a": {
+      "accepted": false,
+      "reason": "root: certificate fingerprint is not a trust anchor"
+    }
+  },
+  "healthy_via_b": {
+    "baseline": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "revoke_a_only": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "block_weak_spki": {
+      "accepted": true,
+      "reason": "accepted"
+    },
+    "remove_root_a": {
+      "accepted": true,
+      "reason": "accepted"
+    }
+  }
+}
